@@ -64,7 +64,7 @@ class Admin::UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
     flash[:danger] = t "flash.not_found"
-    redirect_to root_path
+    redirect_to admin_users_path
   end
 
   def user_params

@@ -29,6 +29,7 @@ class Admin::CategoriesController < ApplicationController
   def update
     if @category.update_attributes cate_params
       flash[:success] = t "flash.update_success"
+<<<<<<< HEAD
     else
       flash[:danger] = t "flash.updated_fail"
     end
