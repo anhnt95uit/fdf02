@@ -29,10 +29,6 @@ class Admin::CategoriesController < ApplicationController
   def update
     if @category.update_attributes cate_params
       flash[:success] = t "flash.update_success"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Admin
     else
       flash[:danger] = t "flash.updated_fail"
     end
@@ -52,7 +48,6 @@ class Admin::CategoriesController < ApplicationController
 
   def load_category
     @category = Category.find_by id: params[:id]
-<<<<<<< HEAD
     @product = Product.get_cate
     if @product.select_cate_product(@category)
       flash[:danger] = t "flash.cate_delete_fail"
@@ -60,11 +55,6 @@ class Admin::CategoriesController < ApplicationController
     elsif @product.select_cate_product(@category).nil?
       return @category
     end
-=======
-    return if @category
-    flash[:danger] = t "flash.not_found_cate"
-    redirect_to admin_listcates_path
->>>>>>> Admin
   end
 
   def category_params
