@@ -99,3 +99,4 @@ users.each do |user|
     user.suggests.create!(content: "This my suggest #{n}",status: 0)
   end
 end
+
