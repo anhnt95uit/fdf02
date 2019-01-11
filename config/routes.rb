@@ -8,9 +8,6 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    get "/cart", to: "carts#show"
-    resources :order_details
-    resource :carts, only: [:show]
     resources :users
     namespace :admin do
       root to: "users#index"
