@@ -26,12 +26,15 @@ Rails.application.routes.draw do
     delete "/destroy_cart", to: "carts#destroy"
     delete "/cart_delete_item", to: "carts#cart_delete_item"
     put "/carts_update", to: "carts#cart_update_item"
+<<<<<<< HEAD
     get "/checkout", to: "carts#checkout"
     get "/products", to: "products#index"
     get "/about", to: "static_pages#about"
     get "/new_suggests", to: "suggests#index"
     resources :suggests
     resources :orders
+=======
+>>>>>>> e
     resources :order_details
 
   end

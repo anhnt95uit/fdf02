@@ -40,6 +40,7 @@
         <div class="space10">&nbsp;</div>
         <!-- cart -->
         <div class="beta-comp">
+<<<<<<< HEAD
          <div class="cart_mini_top dropdown pt15">
             <% if @cart_products %>
               <%= render "carts/cart_mini", cart_products: @cart_products %>
@@ -53,6 +54,41 @@
             <button class="fa fa-search" type="submit" id="searchsubmit"></button>
           </form>
         </div>
+=======
+         <div class="dropdown pt15">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span> 7 - Items<span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-cart" role="menu">
+            <% if @cart_products %>
+            <% @cart_products.each do |cart_product| %>
+           <li>
+             <span class="item">
+               <span class="item-left">
+                 <%= image_tag cart_product.images[0].picture, alt: cart_product.name, :class => "img-responsive image_in_carts" %>
+                 <span class="item-info">
+                   <span><%= cart_product.name %></span>
+                   <span><%= cart_product.price %></span>
+                 </span>
+               </span>
+               <span class="item-right">
+                 <%= link_to "<i class='btn btn-xs btn-danger pull-right'>x</i>".html_safe, cart_delete_item_path(product_id: cart_product.id), method: :DELETE %>
+               </span>
+             </span>
+           </li>
+              <% end %>
+              <% end %>
+            <li class="divider"></li>
+            <li><%= link_to "View Cart", carts_show_path, class: "text-center" %></li>
+          </ul>
+        </div>
+          <!-- .cart -->
+        </div>
+        <div class="beta-comp">
+          <form role="search" method="get" id="searchform" action="/">
+            <input type="text" value="" name="s" id="s" placeholder="Nhập từ khóa..." />
+            <button class="fa fa-search" type="submit" id="searchsubmit"></button>
+          </form>
+        </div>
+>>>>>>> e
       </div>
       <div class="clearfix"></div>
     </div> <!-- .container -->

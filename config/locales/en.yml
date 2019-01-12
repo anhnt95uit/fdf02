@@ -241,8 +241,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       total_item: "Total_item"
       total: "Total: "
       order: "Order: "
+<<<<<<< HEAD
       cancel: "Cancel"
       confirm: "Are you sure cancel it."
+=======
+>>>>>>> e
   carts:
     index:
       title: "Shopping Carts"
@@ -253,6 +256,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       continue: "Continue Shopping"
       total: "Total:"
       checkout: "Checkout"
+<<<<<<< HEAD
       next: "Next"
       cancel: "Cancel"
     checkout:
@@ -286,3 +290,5 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
   user_mailer:
     hi: "Hi, "
     content: "Your order is success. We will immediately delivery for you. "
+=======
+>>>>>>> e
