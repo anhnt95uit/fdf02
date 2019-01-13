@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   before_action :load_product, only: :show
-
   def index
     @products = Product.includes(:images).paginate page: params[:page],
       per_page: Settings.products.paginate.per_page
@@ -8,7 +7,7 @@ class ProductsController < ApplicationController
     @searchs = Product.starts_with(params[:name_product]) if params[:name_product]
     if session[:cart]
       @cart_products = Product.select_id_product session[:cart].keys
-      return if @cart_products
+       return if @cart_products
     end
   end
 
